@@ -10,10 +10,10 @@ body {
     background-color: rgba(0, 0, 0, 0.7);
 }
 
-.lowesttext{
+.credits_div{
         margin-bottom:10px;
     }
 
-.footer_year_text{
+.footer_bottom_text{
         color:rgba(255, 255, 255, 0.5);
 }

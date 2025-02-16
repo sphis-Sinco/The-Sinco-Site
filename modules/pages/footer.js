@@ -8,35 +8,33 @@
 </div>
  */
 
-import { CREDITS } from "../CONSTANTS.js";
+import { CREDITS, SITE_VERSION } from "../CONSTANTS.js";
 
-var footerClass = document.createElement('footer');
-footerClass.className = 'style';
+var footerClass = document.createElement("footer");
+footerClass.className = "style";
 
-var lowesttextClass = document.createElement('div');
-lowesttextClass.className = 'lowesttext';
+var credits_div = document.createElement("div");
+credits_div.className = "credits_div";
 
-var year_para = document.createElement('p');
-year_para.innerHTML = '2025';
-year_para.className = "footer_year_text";
+var site_version_text = document.createElement("p");
+site_version_text.innerHTML = "Site version: " + SITE_VERSION;
+site_version_text.className = "footer_bottom_text";
 
 let i = 0;
-while(i < CREDITS.length)
-{
-        var item = CREDITS[i];
+while (i < CREDITS.length) {
+  var item = CREDITS[i];
 
-        var item_paragraph = document.createElement('p');
-        item_paragraph.innerHTML = item;
+  var item_paragraph = document.createElement("p");
+  item_paragraph.innerHTML = item;
 
-        lowesttextClass.appendChild(item_paragraph);
+  credits_div.appendChild(item_paragraph);
 
-        i++;
+  i++;
 }
 
-footerClass.appendChild(lowesttextClass);
-footerClass.appendChild(year_para);
+footerClass.appendChild(credits_div);
+footerClass.appendChild(site_version_text);
 
-export function appendFooter()
-{
-        document.body.appendChild(footerClass);
+export function appendFooter() {
+  document.body.appendChild(footerClass);
 }
