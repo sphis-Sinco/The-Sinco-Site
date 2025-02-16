@@ -11,13 +11,14 @@
 import { CREDITS } from "../CONSTANTS.js";
 
 var footerClass = document.createElement('footer');
-footerClass.className = 'footer';
+footerClass.className = 'style';
 
 var lowesttextClass = document.createElement('div');
 lowesttextClass.className = 'lowesttext';
 
 var year_para = document.createElement('p');
 year_para.innerHTML = '2025';
+year_para.className = "footer_year_text";
 
 let i = 0;
 while(i < CREDITS.length)
